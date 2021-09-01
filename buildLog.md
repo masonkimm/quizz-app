@@ -29,3 +29,7 @@ React + TypeScript
 - nextQuestion
 
 9. work on HTML in App.tsx
+
+10. import QuestionCard component
+
+11. API.ts > set enum

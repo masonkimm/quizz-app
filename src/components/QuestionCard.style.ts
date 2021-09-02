@@ -7,9 +7,6 @@ type ButtonWrapperProps = {
 
 export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   transition: all 0.3s ease;
-
-  :hover {
-    opacity: 0.8;
   }
   button {
     background: ${({ correct, userClicked }) =>

@@ -21,17 +21,21 @@ const QuestionCard: React.FC<Props> = ({
 }) => {
   return (
     <div className="questionCard">
-      <h3>
+      <h3 className="questionCard__title">
         Question: {questionNr}/{totalQuestions}
       </h3>
-      <p dangerouslySetInnerHTML={{ __html: question }}></p>
+      <p
+        className="questionCard__questions"
+        dangerouslySetInnerHTML={{ __html: question }}
+      ></p>
       {answers.map((answer) => (
         <ButtonWrapper
-          correct={userAnswers?.correctAnswer == answer}
+          correct={userAnswers?.correctAnswer === answer}
           userClicked={userAnswers?.answer === answer}
         >
-          <div className="answerButtons" key={answer}>
+          <div key={answer}>
             <button
+              className="questionCard__answerBtn"
               disabled={userAnswers ? true : false}
               value={answer}
               onClick={callback}

@@ -32,15 +32,25 @@
   flex-direction: column;
   align-items: center;
 }
-
-.header h1 {
+/* Header */
+.header__title {
   font-size: 3rem;
   padding: 2rem;
 }
-.header button {
-  padding: 1rem;
+.header__startBtn {
+  padding: 0.6rem;
+  border-radius: 17px;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
-
+.header__startBtn:hover {
+  background-color: transparent;
+  color: white;
+}
+.header__score {
+  margin-bottom: 10px;
+}
+/* Body */
 .body {
   display: flex;
   flex-direction: column;
@@ -50,42 +60,45 @@
   width: 60%;
   height: auto;
 }
+/* QuestionCard */
 .questionCard {
   margin-bottom: 2rem;
 }
-.questionCard h3 {
+.questionCard__title {
   margin: 1rem;
 }
-.questionCard p {
+.questionCard__questions {
   margin: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
-
-.questionCard .answerButtons button {
-  width: 200px;
+.questionCard__answerBtn {
+  min-width: 200px;
+  max-width: 300px;
   padding: 1rem;
   cursor: pointer;
   border-radius: 17px;
   margin: 10px;
 }
-.questionCard .answerButtons button:hover {
+.questionCard__answerBtn:hover {
   background-color: transparent;
   color: white;
 }
 
-.nextQuestion {
-  margin: 1rem;
-  padding: 1rem;
+.body__nextQuestion {
+  width: 100px;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
   border-radius: 17px;
   cursor: pointer;
 }
-.nextQuestion:hover {
-  background-color: rgb(84, 118, 151);
+.body__nextQuestion:hover {
+  background-color: transparent;
+  color: white;
 }
 
 /* LOGO */
-.App-logo {
+.logo {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -94,12 +107,12 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .logo {
+    animation: logo-spin infinite 20s linear;
   }
 }
 
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }

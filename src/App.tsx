@@ -77,13 +77,13 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header">
-          <h1>Quizz App</h1>
+          <h1 className="header__title">Trivia App</h1>
           {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-            <button className="App__start" onClick={startTrivia}>
-              Start Quizz
+            <button className="header__startBtn" onClick={startTrivia}>
+              Start Quiz
             </button>
           ) : null}
-          {!gameOver ? <h3 className="App__score">Score: {score}</h3> : null}
+          {!gameOver ? <h3 className="header__score">Score: {score}</h3> : null}
 
           {loading && <p> Loading Questions ... </p>}
         </div>
@@ -102,15 +102,13 @@ const App = () => {
           !loading &&
           userAnswers.length === number + 1 &&
           number !== TOTAL_QUESTIONS - 1 ? (
-            <button className="nextQuestion" onClick={nextQuestion}>
+            <button className="body__nextQuestion" onClick={nextQuestion}>
               Next
             </button>
           ) : null}
         </div>
 
-        <div className="App__logo">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
+        <img src={logo} className="logo" alt="logo" />
       </div>
     </div>
   );

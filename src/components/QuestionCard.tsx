@@ -32,8 +32,9 @@ const QuestionCard: React.FC<Props> = ({
         <ButtonWrapper
           correct={userAnswers?.correctAnswer === answer}
           userClicked={userAnswers?.answer === answer}
+          key={answer}
         >
-          <div key={answer}>
+          <div className="questionCard__answers" key={answer}>
             <button
               className="questionCard__answerBtn"
               disabled={userAnswers ? true : false}

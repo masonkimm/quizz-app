@@ -1,4 +1,4 @@
-# blog-app
+# trivia-app
 
 Project link: (https://masonkimm.github.io/trivia-app/)
 

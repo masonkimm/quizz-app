@@ -1,4 +1,4 @@
-# quizz-app
+# trivia-app
 
 React + TypeScript
 
@@ -33,3 +33,5 @@ React + TypeScript
 10. import QuestionCard component
 
 11. API.ts > set enum
+
+12. npm run deploy
